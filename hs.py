@@ -1,11 +1,10 @@
 from random import shuffle
-n=0
 n=int(input("Enter no. of processes: "))
 process=[int(j) for j in range(n)]
 shuffle(process)
 leaders=process[:]
 print(process)
-#l=round number
+#l is round number
 for l in range(n):
 	dist=2**l
 	print("-----------------------------------------")
@@ -14,6 +13,7 @@ for l in range(n):
 	
 	print("Leaders: ",leaders)
 	for leader in list(leaders):
+		print("------------------")
 		ind=process.index(leader)
 		print("Index : ",ind)
 		if ind-dist<0:
